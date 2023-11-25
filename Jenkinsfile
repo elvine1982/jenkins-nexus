@@ -1,14 +1,14 @@
 pipeline {
     agent any
     tools {
-        maven "MAVEN"
+        maven "maven"
     }
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "159.223.191.140:8081"
+        NEXUS_URL = "http://18.117.237.189:8081"
         NEXUS_REPOSITORY = "java-app"
-        NEXUS_CREDENTIAL_ID = "NEXUS_CRED"
+        NEXUS_CREDENTIAL_ID = "nexus.cred"
     }
     stages {
         stage("Clone code from GitHub") {
